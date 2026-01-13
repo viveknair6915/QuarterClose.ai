@@ -6,8 +6,12 @@ import os
 API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 # If Render provides just the hostname (e.g., example.onrender.com), prepend https://
+# BUT if it is an internal service name (like 'quarterclose-backend'), keep it as http://
 if not API_URL.startswith("http"):
-    API_URL = f"https://{API_URL}"
+    if "." not in API_URL: # Likely an internal service name
+        API_URL = f"http://{API_URL}:8000" # Attempt direct port access
+    else:
+        API_URL = f"https://{API_URL}"
 
 def get_data(endpoint: str):
     try:
