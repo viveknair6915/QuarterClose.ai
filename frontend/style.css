@@ -1,0 +1,111 @@
+/* Global Font & Reset */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+.stApp {
+    background-color: #050505;
+    /* Deep Black */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Gradient Headers */
+h1,
+h2,
+h3 {
+    background: linear-gradient(90deg, #FF4B4B 0%, #FF914D 50%, #FFCC00 100%);
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+h1 {
+    font-size: 3.5rem !important;
+}
+
+h2 {
+    font-size: 2.2rem !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+/* Glassmorphism Cards */
+div[data-testid="stMetric"],
+.css-1r6slb0,
+.stDataFrame,
+.stPlotlyChart {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.2s ease;
+}
+
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 145, 77, 0.5);
+}
+
+/* Sidebar Styling */
+section[data-testid="stSidebar"] {
+    background-color: #000000;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Metric Values */
+div[data-testid="stMetricValue"] {
+    font-size: 2.5rem !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Metric Delta */
+div[data-testid="stMetricDelta"] {
+    font-size: 1rem !important;
+}
+
+/* Buttons */
+.stButton>button {
+    background: linear-gradient(45deg, #FF4B4B, #FF914D);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 75, 75, 0.4);
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    box-shadow: 0 6px 20px rgba(255, 75, 75, 0.6);
+    transform: scale(1.02);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Alerts/Status */
+.stAlert {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}

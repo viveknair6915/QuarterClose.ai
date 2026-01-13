@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+alembic
+pandas
+numpy
+scipy
+openpyxl
+xlsxwriter
+streamlit
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+plotly
+watchdog
