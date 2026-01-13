@@ -2,8 +2,6 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@localhost:5432/quarterclose")
-
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite:///./quarterclose.db")
 
 engine = create_engine(

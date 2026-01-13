@@ -1,7 +1,9 @@
 import requests
 import streamlit as st
 
-API_URL = "http://localhost:8000"
+import os
+
+API_URL = os.getenv("API_URL", "http://localhost:8000")
 
 def get_data(endpoint: str):
     try:
