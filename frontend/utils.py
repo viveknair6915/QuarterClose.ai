@@ -5,6 +5,10 @@ import os
 
 API_URL = os.getenv("API_URL", "http://localhost:8000")
 
+# If Render provides just the hostname (e.g., example.onrender.com), prepend https://
+if not API_URL.startswith("http"):
+    API_URL = f"https://{API_URL}"
+
 def get_data(endpoint: str):
     try:
         response = requests.get(f"{API_URL}{endpoint}")

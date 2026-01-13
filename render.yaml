@@ -24,7 +24,7 @@ services:
         fromService:
           type: web
           name: quarterclose-backend
-          property: url
+          property: host
 
 databases:
   - name: quarterclose-db
